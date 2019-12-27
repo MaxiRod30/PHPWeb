@@ -15,10 +15,14 @@
     if (mysql_num_rows($result)==0) {
         // enviar mensaje de error
         header("Location: errorPage.php?MSG=Debe agregar departamentos");
-    } else {
+    } else 
+    {
         // generar lista
-        while ($regPRD = mysql_fetch_array($result)) {
-            
+        $i=0;
+        while($regPRD = mysql_fetch_array($result))
+        {
+
+            $i = $i + 1;
             $prdID  = $regPRD["productoID"];
             $prdNOM  = utf8_encode($regPRD["productoNOM"]);
             $prdDESCRIP  = utf8_encode($regPRD["productoDESCRIP"]);
@@ -28,11 +32,31 @@
             $paiNOM  = utf8_encode($regPRD["paisesNOM"]);
             $prdACT  = utf8_encode($regPRD["productoACT"]);
 
-            echo "<option value='$idDTO'>$dpto</option>\n";
+            if ($i=1)
+            {
+                echo "<tr>";
+            }
+            echo "
+                <th>
+                    <div class='w3-row-padding w3-padding-16 w3-center' id='food'>
+                        <div class='w3-quarter'>
+                            <img src='/w3images/sandwich.jpg' alt='Sandwich' style='width:100%'>
+                            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                        </div>
+                    </div> 
+                </th>
+            "; 
+            if ($i=3) 
+            {
+                $i=0;
+                echo "</tr>";  
+            }
         } // end while
+    
         // cerrar conexión
         mysql_close($conex);
-    } // endif  
+    }
 
 
 ?>

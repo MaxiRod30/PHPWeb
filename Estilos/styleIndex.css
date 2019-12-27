@@ -713,7 +713,7 @@ a {
     }
     .w3-col.m3,
     .w3-quarter {
-        width: 24.99999%
+        width: 80%
     }
     .w3-col.m4,
     .w3-third {
@@ -1064,7 +1064,7 @@ a {
 .w3-row-padding>.w3-threequarter,
 .w3-row-padding>.w3-quarter,
 .w3-row-padding>.w3-col {
-    padding: 0 8px
+    padding: 0 30px
 }
 
 .w3-container,
@@ -1942,4 +1942,10 @@ a {
 .w3-border-pale-blue,
 .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff!important
+}
+
+table th {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(20, 22, 22);
 }
