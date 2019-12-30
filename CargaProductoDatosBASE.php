@@ -18,11 +18,12 @@
     } else 
     {
         // generar lista
-        $i=0;
+
+        echo "<tr> <hr>";
+
         while($regPRD = mysql_fetch_array($result))
         {
-
-            $i = $i + 1;
+          
             $prdID  = $regPRD["productoID"];
             $prdNOM  = utf8_encode($regPRD["productoNOM"]);
             $prdDESCRIP  = utf8_encode($regPRD["productoDESCRIP"]);
@@ -32,28 +33,34 @@
             $paiNOM  = utf8_encode($regPRD["paisesNOM"]);
             $prdACT  = utf8_encode($regPRD["productoACT"]);
 
-            if ($i=1)
-            {
+            ;
+            // Separo las 3 columnas en la pagina INDEX
+            if(($prdID % 4) == 0 )
+            {   
+                echo "</tr>";
                 echo "<tr>";
             }
             echo "
-                <th>
-                    <div class='w3-row-padding w3-padding-16 w3-center' id='food'>
-                        <div class='w3-quarter'>
-                            <img src='/w3images/sandwich.jpg' alt='Sandwich' style='width:100%'>
-                            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-                            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-                        </div>
-                    </div> 
+                <th class= 'celda'>
+                    <h3>  $prdNOM </h3>
+                    <img class='celdaImg' src='Image/img_Log.png' alt='Sandwich'>
+                    <div class='texto'>
+                        <p> $prdDESCRIP</p>
+                    </div>
+                    <p> Marca: $marcNOM </p>
+                    <p> Categoria: $catNOM </p>
+                    <p> País: $paiNOM </p>
+                    <p> USD $prdPRECIO</p>
                 </th>
             "; 
-            if ($i=3) 
-            {
-                $i=0;
-                echo "</tr>";  
-            }
         } // end while
-    
+        // El caso que quede incompleta cierro la tabla
+        if(($prdID % 4) != 0 )
+        {   
+            echo "</tr>";
+        }
+
+
         // cerrar conexión
         mysql_close($conex);
     }

@@ -30,22 +30,29 @@
 </div>
   
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<!--  -->
+<div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:100px">
 
   <!-- First Photo Grid-->
-    <table id="lst">
+    <table class= "celdaColumna">
         <?php
             include "CargaProductoDatosBASE.php"
         ?>  
     </table>
 
 <!-- End page content -->
-<table>
+<!-- <table class= "celdaColumna" >
     <tr>
-        <th>sadasd</th>
-        <th>adsasd</th>
-        <th>asdasd</th>
+      <th class ="celda">asdasd</th>
+      <th class ="celda">asdasd</th>
+      <th class ="celda">asdasd</th>
     </tr>
-    </table>
+    <tr >
+      <th class ="celda">asdasd</th>
+      <th class ="celda">asdasd</th>
+      <th class ="celda">asdasd</th>
+    </tr>
+
+    </table> -->
 </body>
 </html>

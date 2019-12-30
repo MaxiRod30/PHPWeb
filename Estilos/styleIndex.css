@@ -652,7 +652,7 @@ a {
 .w3-twothird,
 .w3-threequarter,
 .w3-quarter {
-    float: left;
+    /* float: left; */
     width: 100%
 }
 
@@ -713,7 +713,7 @@ a {
     }
     .w3-col.m3,
     .w3-quarter {
-        width: 80%
+        width: 50%
     }
     .w3-col.m4,
     .w3-third {
@@ -1064,7 +1064,7 @@ a {
 .w3-row-padding>.w3-threequarter,
 .w3-row-padding>.w3-quarter,
 .w3-row-padding>.w3-col {
-    padding: 0 30px
+    padding: 0 20px
 }
 
 .w3-container,
@@ -1411,8 +1411,8 @@ a {
 }
 
 .w3-padding-16 {
-    padding-top: 16px!important;
-    padding-bottom: 16px!important
+    padding-top: 10px!important;
+    padding-bottom: 10px!important
 }
 
 .w3-padding-24 {
@@ -1944,8 +1944,36 @@ a {
     border-color: #e7ffff!important
 }
 
-table th {
+.celda {
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(20, 22, 22);
+    border-color: rgb(171, 173, 173);
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.celdaImg {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.celdaColumna {
+    border-spacing: 20px;
+}
+
+.texto {
+    width: 250px;
+    height: 200px;
+    border-radius: 20%;
+    background: rgba(201, 198, 198, 0.384);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+    padding: 5%;
+    overflow: auto;
 }
