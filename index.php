@@ -20,12 +20,25 @@
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
 </nav>
 
+<!-- Menu a la derecha (hidden by default)  -->
+<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr">
+  <a href="javascript:void(0)" onclick="menu_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="menu_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
 <!-- Top menu -->
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Mail</div>
-    <div class="w3-center w3-padding-16">My Food</div>
+
+    <?php
+      $nombre = $_SESSION["nombreLogueado"];
+      echo "<div class='w3-button w3-padding-16 w3-right' onclick='menu_open()'>$nombre</div>";
+    ?>
+
+    <div class="w3-center w3-padding-16">Mi pagina</div>
   </div>
 </div>
   
