@@ -21,11 +21,10 @@
 </nav>
 
 <!-- Menu a la derecha (hidden by default)  -->
-<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr">
+<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 60%;display:none;z-index:2;width:40%;min-width:300px" id="menu_usr">
+  <a href="CambiarClave/CambiarClave.php" onclick="menu_close()" class="w3-bar-item w3-button">Cambiar Contraseña</a>
   <a href="javascript:void(0)" onclick="menu_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="menu_close()" class="w3-bar-item w3-button">Food</a>
-  <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
+  class="w3-bar-item w3-button">Cerrar Menu</a>
 </nav>
 
 <!-- Top menu -->
