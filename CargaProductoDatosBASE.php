@@ -2,12 +2,11 @@
 
     include "conexionBASE.php";
     // crear sentencia SQL
-    $sql = "SELECT p.productoID, p.productoNOM, p.productoDESCRIP, p.productoPRECIO, m.marcasNOM, c.categoriasNOM,pai.paisesNOM, p.productoACT
+    $sql = "SELECT p.productoID, p.productoNOM, p.productoDESCRIP, p.productoPRECIO, m.marcasNOM, c.categoriasNOM,p.productoPAIS, p.productoACT
     FROM producto AS p
     INNER JOIN marcas AS m
-    INNER JOIN paises AS pai
     INNER JOIN categorias AS c
-    ON (p.productoMARCA = m.marcasID) AND (p.productoCATEG = c.categoriasID) AND (p.productoPAIS = pai.paisesID)";
+    ON (p.productoMARCA = m.marcasID) AND (p.productoCATEG = c.categoriasID)";
     
     // ejecutar sentencia SQL
     $result = mysql_query($sql,$conex);
@@ -30,7 +29,7 @@
             $prdPRECIO  = utf8_encode($regPRD["productoPRECIO"]);
             $marcNOM  = utf8_encode($regPRD["marcasNOM"]);
             $catNOM  = utf8_encode($regPRD["categoriasNOM"]);
-            $paiNOM  = utf8_encode($regPRD["paisesNOM"]);
+            $paiNOM  = utf8_encode($regPRD["productoPAIS"]);
             $prdACT  = utf8_encode($regPRD["productoACT"]);
 
             ;

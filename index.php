@@ -7,17 +7,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Estilos/styleIndex2.css">
 <link rel="stylesheet" href="Estilos/styleIndex.css">
-<script type="text/javascript" src="indexjs.js"></script>
 
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">  
+<script type="text/javascript" src="indexjs.js"></script>
 
 <body ondblclick="menu_close()">
 
-<!-- Sidebar (hidden by default) -->
+<!-- Menu a la Izquierda (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
   class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="menu_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="Consumidor/ListarTodo/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Listar Articulos</a>
   <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
+  <?php
+    $privilegio= $_SESSION["userPrivilegio"];
+    if ($privilegio == "Administrador"){
+      echo '<a href="Administrador/Marcas/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Ingresar Marcas</a>';
+      echo '<a href="Administrador/EliminacionArticulos/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Eliminacion Articulos</a>';
+    }
+  ?>
 </nav>
 
 <!-- Menu a la derecha (hidden by default)  -->
@@ -46,25 +55,27 @@
 <div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:100px">
 
   <!-- First Photo Grid-->
-    <table class= "celdaColumna">
-        <?php
-            include "CargaProductoDatosBASE.php"
-        ?>  
-    </table>
+  <?php
+    $PantallaActiva = $_SESSION["PantallaCentral"];
+    
+    switch ($PantallaActiva) {
+      case 1:
+        echo '<table class= "celdaColumna">';
+          include "CargaProductoDatosBASE.php";
+        echo "</table>";
+      break;
+      case 100:
+        include "Administrador/Marcas/FormMarcas.php";  
+      break;
+      case 101:
+        echo "<h2>aca se elimina</h2>";
+      break;
+      default:
+        echo '<table class= "celdaColumna">';
+          include "CargaProductoDatosBASE.php";
+        echo "</table>";
+      }
 
-<!-- End page content -->
-<!-- <table class= "celdaColumna" >
-    <tr>
-      <th class ="celda">asdasd</th>
-      <th class ="celda">asdasd</th>
-      <th class ="celda">asdasd</th>
-    </tr>
-    <tr >
-      <th class ="celda">asdasd</th>
-      <th class ="celda">asdasd</th>
-      <th class ="celda">asdasd</th>
-    </tr>
-
-    </table> -->
+  ?>
 </body>
 </html>
