@@ -28,8 +28,9 @@
     <input type="password" name="namePASSrep" id="idPASSrep" placeholder="Repita contraseña nueva" required/>
     <hr>
 
-    <a href="FormLogin.php" class="button2">Cancelar</a>
-    <a href="#" class="button" onclick="showHint(this.value,'idTXT0');>Modificar Clave</a>
+    <a href="../index.php" class="button2">Cancelar</a>
+    <a href="#" class="button" onclick="CheckREG('idPASSant','idPASSnue','idPASSrep')">Modificar Clave</a>
+    
   </form>
 </div>
 </body>

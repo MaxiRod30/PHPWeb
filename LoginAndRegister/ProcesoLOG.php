@@ -22,12 +22,13 @@
         while ($regDTO = mysql_fetch_array($result)) {
             
             $nombreUSER  = utf8_encode($regDTO["usersNOM"]);
-            
+            $userLog = utf8_encode($regDTO["usersNAME"]);
         }
         // crear sesión
         session_start();
         // guardar en sesión el nombre del usuario
         $_SESSION["nombreLogueado"] =  $nombreUSER;
+        $_SESSION["userLogueado"] = $userLog;
         // crear cookie
         setcookie("CK_login","usrOK",time()+60,"/BIOS/Proyecto");
         // redirigir a bienvenida

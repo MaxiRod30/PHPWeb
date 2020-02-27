@@ -6,16 +6,29 @@
 
    include "../CtrlSession.php"; 
 
-    // capturar y convertir datos del formulario
+    // capturar y convertir datos del formulario userLogueado
     $usuario = $_SESSION["nombreLogueado"];
-    $password   = md5(utf8_decode($_POST["namePASSnue"]));
-    // controlar exitencia
-    $sql = "UPDATE users SET usersPASS=$password where usersNAME=$usuario";
-    // ejecutar sentencia de control
-    $result = mysql_query($sql,$conex);
-    // determinar exitencia
-    mysql_close($conex);   
+    $userLOG = $_SESSION["userLogueado"];
+    $passwordNEW1 = $_POST["namePASSnue"];
+    $passwordOLD1 = $_POST["namePASSant"];
 
-    header("Location: ../paginaDeSeCambioCorrectamente.php"); 
+    $passwordNEW   = md5(utf8_decode($_POST["namePASSnue"]));
+    $passwordOLD = md5(utf8_decode($_POST["namePASSant"]));
 
+    // crear sentencia para control de usuario
+    $sql  = "UPDATE users SET usersPASS='$passwordNEW' where usersNAME='$userLOG' AND usersPASS='$passwordOLD' ";
+
+       // ejecutar sentencia
+       $result = mysql_query($sql,$conex);
+       // controlar exitencia
+
+       if (mysql_affected_rows($conex) > 0) {
+           
+            header("Location: ../DatosOK/CambioContraOK.php");  
+       } 
+       else {
+            header("location: ../Error/errorCambioPASS.php");
+        }
+        
+        mysql_close($conex);
 ?>

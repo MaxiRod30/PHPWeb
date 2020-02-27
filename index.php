@@ -10,31 +10,31 @@
 <script type="text/javascript" src="indexjs.js"></script>
 
 
-<body>
+<body ondblclick="menu_close()">
 
 <!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_iz">
+  <a href="javascript:void(0)" onclick="menu_close()"
   class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="#food" onclick="menu_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
 </nav>
 
 <!-- Menu a la derecha (hidden by default)  -->
-<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 60%;display:none;z-index:2;width:40%;min-width:300px" id="menu_usr">
+<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 60%;display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_dr">
   <a href="CambiarClave/CambiarClave.php" onclick="menu_close()" class="w3-bar-item w3-button">Cambiar Contraseña</a>
-  <a href="javascript:void(0)" onclick="menu_close()"
-  class="w3-bar-item w3-button">Cerrar Menu</a>
+  <a href="LoginAndRegister/ProcesoLogOut.php" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Sesion</a>
+  <a href="javascript:void(0)" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Menu</a>
 </nav>
 
 <!-- Top menu -->
 <div class="w3-top">
   <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-button w3-padding-16 w3-left" onclick="menu_iz_open()">☰</div>
 
     <?php
       $nombre = $_SESSION["nombreLogueado"];
-      echo "<div class='w3-button w3-padding-16 w3-right' onclick='menu_open()'>$nombre</div>";
+      echo "<div class='w3-button w3-padding-16 w3-right' onclick='menu_dr_open()'>$nombre</div>";
     ?>
 
     <div class="w3-center w3-padding-16">Mi pagina</div>
