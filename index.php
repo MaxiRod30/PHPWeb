@@ -27,6 +27,7 @@
       echo '<a href="Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
       echo '<a href="Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
       echo '<a href="Administrador/Producto/MoverPantProducto.php" onclick="menu_close()" class="w3-bar-item w3-button">Producto</a>';
+      echo '<a href="Administrador/ProductoModificar/MoverPantProducto.php" onclick="menu_close()" class="w3-bar-item w3-button">Producto Modificar</a>';
     }
   ?>
 </nav>
@@ -74,6 +75,9 @@
       break;
       case 102:
         include "Administrador/Producto/FormProducto.php"; 
+      break;
+      case 103:
+        include "Administrador/ProductoModificar/FormProducto.php"; 
       break;
       default:
         echo '<table class= "celdaColumna">';

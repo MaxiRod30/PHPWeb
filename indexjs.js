@@ -141,6 +141,7 @@ function CheckPRODUCTO() {
     var idProductoCategoria = document.getElementById("idCategoria").value;
     var idProductoMarcas = document.getElementById("idMarca").value;
     var idProductoOrigen = document.getElementById("idOrigen").value;
+    var idProductoEstado = document.getElementById("idEstado").value;
     var file = document.forms['dataFRM_PRODUCTO']['idfile'].files[0];
 
 
@@ -169,6 +170,10 @@ function CheckPRODUCTO() {
         error = true;
         mensaje = mensaje + "Elija un origen para el producto Por Favor!\n";
     } // endif
+    if (idProductoEstado == "") {
+        error = true;
+        mensaje = mensaje + "Elija un estado para el producto Por Favor!\n";
+    } // endif
     if (file == undefined) {
         error = true;
         mensaje = mensaje + "Elija una foto para su producto Por Favor!\n";
@@ -180,6 +185,6 @@ function CheckPRODUCTO() {
     } else {
         // enviar formulario
 
-        document.getElementById("dataFRM_CATEGORIA_UP").submit();
+        document.getElementById("dataFRM_PRODUCTO").submit();
     } // endif                        
 } // end function

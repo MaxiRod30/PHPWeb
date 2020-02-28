@@ -1,7 +1,23 @@
 
 <div class="boxRegistro">
     <h1>Ingreso de Producto</h1>
-        <form id="dataFRM_PRODUCTO" action="Administrador/Producto/ProcesoIngresarProducto.php" method="POST" class="formulario">
+        <form id="dataFRM_FILTRO" action="Administrador/Marcas/ProcesoIngresarMarcas.php" method="POST" class="formulario">
+            <hr>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
+            <hr>
+            <a href="#" class="button" onclick="CheckMARCA()">Guardar Marca</a>
+        </form>
+
+        <form id="dataFRM_PRODUCTO" action="Administrador/Producto/ProcesoIngresarProducto.php"enctype="multipart/form-data" method="POST" class="formulario">
             <hr>
             <label id="icon" for="name"><i class="icon-user"></i></label>
             <input type="text" name="nameProductoNOM" id="idProductoNOM" placeholder="Ingrese nombre del Producto" required/>
@@ -36,6 +52,13 @@
               <option value="China">China</option>
               <option value="UK">UK</option>
               <option value="USA">USA</option>         
+            </select>
+            
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <select id="idEstado" name="nameEstado">
+              <option value="">-- Seleccione --</option>
+              <option value="Activo">Activo</option>
+              <option value="De baja">De Baja</option>     
             </select>
 
             <br/>
