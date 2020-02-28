@@ -26,6 +26,7 @@
     if ($privilegio == "Administrador"){
       echo '<a href="Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
       echo '<a href="Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
+      echo '<a href="Administrador/Producto/MoverPantProducto.php" onclick="menu_close()" class="w3-bar-item w3-button">Producto</a>';
     }
   ?>
 </nav>
@@ -71,12 +72,15 @@
       case 101:
         include "Administrador/Categoria/FormCategorias.php"; 
       break;
+      case 102:
+        include "Administrador/Producto/FormProducto.php"; 
+      break;
       default:
         echo '<table class= "celdaColumna">';
           include "CargaProductoDatosBASE.php";
         echo "</table>";
       }
-
+      
   ?>
 </body>
 </html>

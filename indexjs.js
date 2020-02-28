@@ -128,3 +128,58 @@ function CheckCATEGORIA_UP() {
         document.getElementById("dataFRM_CATEGORIA_UP").submit();
     } // endif                        
 } // end function
+
+// ****************************************************************
+function CheckPRODUCTO() {
+    // preparar mensaje y control de error;
+    var mensaje = "POR FAVOR!: \n";
+    var error = false;
+    // capturar datos del formulario
+    var nombreProducto = document.getElementById("idProductoNOM").value;
+    var descripcionProducto = document.getElementById("idProductoDESCR").value;
+    var idProductoPRECIO = document.getElementById("idProductoPRECIO").value;
+    var idProductoCategoria = document.getElementById("idCategoria").value;
+    var idProductoMarcas = document.getElementById("idMarca").value;
+    var idProductoOrigen = document.getElementById("idOrigen").value;
+    var file = document.forms['dataFRM_PRODUCTO']['idfile'].files[0];
+
+
+    // validar datos
+    if (nombreProducto == "") {
+        error = true;
+        mensaje = mensaje + "Escriba nombre del producto Por Favor!\n";
+    } // endif
+    if (descripcionProducto == "") {
+        error = true;
+        mensaje = mensaje + "Escriba descripcion del producto Por Favor!\n";
+    } // endif
+    if (idProductoPRECIO == "") {
+        error = true;
+        mensaje = mensaje + "Escriba Precio del producto Por Favor!\n";
+    } // endif
+    if (idProductoCategoria == 0) {
+        error = true;
+        mensaje = mensaje + "Elija una categoria para el producto Por Favor!\n";
+    } // endif
+    if (idProductoMarcas == 0) {
+        error = true;
+        mensaje = mensaje + "Elija una marca para el producto Por Favor!\n";
+    } // endif
+    if (idProductoOrigen == "") {
+        error = true;
+        mensaje = mensaje + "Elija un origen para el producto Por Favor!\n";
+    } // endif
+    if (file == undefined) {
+        error = true;
+        mensaje = mensaje + "Elija una foto para su producto Por Favor!\n";
+    } // endif
+    // controlar error
+    if (error) {
+        // mostrar mensaje de error
+        window.alert(mensaje);
+    } else {
+        // enviar formulario
+
+        document.getElementById("dataFRM_CATEGORIA_UP").submit();
+    } // endif                        
+} // end function

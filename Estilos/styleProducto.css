@@ -100,8 +100,6 @@ hr {
     opacity: 0.3;
 }
 
-select,
-option,
 input[type=text],
 input[type=password] {
     width: 80%;

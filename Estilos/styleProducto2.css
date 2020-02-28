@@ -75,7 +75,7 @@ h1 {
 .boxRegistro {
     opacity: 0.91;
     margin: 10% auto;
-    margin-top: 1%;
+    margin-top: 5%;
     width: 40%;
     height: 60%;
     -webkit-border-radius: 8px/7px;
@@ -153,14 +153,14 @@ a.button {
     font-size: 14px;
     font-weight: 700;
     color: white;
-    padding: 6px 25px 0px 20px;
-    margin: 10px 8px 20px 0px;
+    padding: 6px 15px 0px 20px;
+    margin: 10px 8px 10px 0px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    margin-left: 32%;
-    width: 31%;
-    height: 30px;
+    margin-left: 12%;
+    width: 34%;
+    height: 32px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -183,23 +183,23 @@ a.button:hover {
 
 .button2 {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
-    padding: 6px 25px 0px 20px;
-    margin: 10px 8px 20px 0px;
+    padding: 6px 15px 0px 20px;
+    margin: 10px 8px 10px 0px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    margin-left: 75%;
-    width: 15%;
-    height: 23px;
+    margin-left: 5%;
+    width: 34%;
+    height: 32px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: #3c4561;
-    -webkit-box-shadow: 0 3px rgba(72, 138, 110, 0.75);
-    -moz-box-shadow: 0 3px rgba(72, 138, 110, 0.75);
-    box-shadow: 0 3px rgba(72, 138, 110, 0.75);
+    background-color: #d33b3b;
+    -webkit-box-shadow: 0 3px rgba(58, 87, 175, .75);
+    -moz-box-shadow: 0 3px rgba(83, 103, 163, 0.75);
+    box-shadow: 0 3px rgba(58, 87, 175, .75);
     transition: all 0.1s linear 0s;
     top: 0px;
     position: relative;
@@ -211,103 +211,4 @@ a.button:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-}
-
-
-/* DEFINICION DE ESTILOS PARA MINISISTEMA PERSONAS FICHEROS */
-
-div#head {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #0B4F70;
-}
-
-div#head h1 {
-    font-family: arial;
-    font-size: 24px;
-    color: #097FBA;
-    letter-spacing: 2px;
-    display: inline;
-}
-
-div#menu {
-    margin-top: 20px;
-}
-
-
-/*Marcas*/
-
-div#contenido {
-    width: 100%;
-    margin: 40px auto;
-}
-
-fieldset#dsc {
-    font-family: calibri;
-    font-size: 14px;
-    font-style: italic;
-    text-align: justify;
-    padding: 20px;
-}
-
-fieldset#frm {
-    width: 280px;
-    font-family: arial;
-    font-size: 12px;
-    font-style: normal;
-    text-align: right;
-    padding: 20px;
-}
-
-legend {
-    font-family: arial;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: bold;
-    background-color: rgb(9, 81, 238);
-    color: white;
-    letter-spacing: 2px;
-    padding: 5px;
-}
-
-table#lst {
-    width: 100%;
-    font-style: normal;
-}
-
-table#lst th {
-    background-color: rgb(9, 81, 238);
-    color: white;
-    text-align: center;
-}
-
-table#lst td {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #3D9DCD;
-    text-align: center;
-}
-
-.txtERR {
-    font-weight: bold;
-    color: #DC0A0A;
-    letter-spacing: 3px;
-}
-
-.txtMSG {
-    font-weight: bold;
-    color: #085276;
-    letter-spacing: 3px;
-}
-
-img.btn {
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-}
-
-a.reg {
-    color: green;
-    text-decoration: none;
-    background-color: transparent;
 }
