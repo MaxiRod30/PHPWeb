@@ -25,7 +25,7 @@
     $privilegio= $_SESSION["userPrivilegio"];
     if ($privilegio == "Administrador"){
       echo '<a href="Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
-      echo '<a href="Administrador/EliminacionArticulos/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Eliminacion Articulos</a>';
+      echo '<a href="Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
     }
   ?>
 </nav>
@@ -69,7 +69,7 @@
         include "Administrador/Marcas/FormMarcas.php"; 
       break;
       case 101:
-        include "ProcesoModificarMarcas.php";
+        include "Administrador/Categoria/FormCategorias.php"; 
       break;
       default:
         echo '<table class= "celdaColumna">';
