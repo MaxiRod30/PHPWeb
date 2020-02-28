@@ -17,7 +17,12 @@
 <body onload= "LogOUT();" >
 <div class="boxRegistro">
 
-  <h1>CAMBIO DE CONTRASEÑA CORRECTO !</h1>
+   <?php
+        // capturar mensaje de error    
+        $mensaje = $_GET["MSG"];
+        echo "<h1 class='txtERR'>$mensaje</h1>\n";
+        
+   ?>
 
 </div>
 

@@ -23,12 +23,13 @@
        // controlar exitencia
 
        if (mysql_affected_rows($conex) > 0) {
-           
-            header("Location: ../DatosOK/CambioContraOK.php");  
+        
+            header("location: ../DatosOK/CambioContraOK.php?MSG=Se cambio correctamente la constraseña");
        } 
        else {
             header("location: ../Error/errorCambioPASS.php");
         }
+        
         
         mysql_close($conex);
 ?>

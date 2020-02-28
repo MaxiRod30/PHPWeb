@@ -10,7 +10,7 @@
     // controlar conexión
     if (!$conex) {
         // enviar mensaje de error
-        header("Location: ../Error/errorPage.php?MSG=NO se pudo CONECTAR al Servidor de Base de Datos");    
+        header("Location: Error/errorPage.php?MSG=NO se pudo CONECTAR al Servidor de Base de Datos");    
     } // endif
 
     // seleccionar Base de Datos
@@ -19,6 +19,6 @@
 
     if (!$selDB) {
         // enviar mensaje de error
-        header("Location: ../Error/errorPage.php?MSG=NO se pudo SELECCIONAR Base de Datos");
+        header("Location: Error/errorPage.php?MSG=NO se pudo SELECCIONAR Base de Datos");
     } // endif
 ?>

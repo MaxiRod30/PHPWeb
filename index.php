@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Estilos/styleIndex2.css">
 <link rel="stylesheet" href="Estilos/styleIndex.css">
+<link rel="stylesheet" href="Estilos/styleMarcas.css" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">  
@@ -23,7 +24,7 @@
   <?php
     $privilegio= $_SESSION["userPrivilegio"];
     if ($privilegio == "Administrador"){
-      echo '<a href="Administrador/Marcas/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Ingresar Marcas</a>';
+      echo '<a href="Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
       echo '<a href="Administrador/EliminacionArticulos/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Eliminacion Articulos</a>';
     }
   ?>
@@ -65,10 +66,10 @@
         echo "</table>";
       break;
       case 100:
-        include "Administrador/Marcas/FormMarcas.php";  
+        include "Administrador/Marcas/FormMarcas.php"; 
       break;
       case 101:
-        echo "<h2>aca se elimina</h2>";
+        include "ProcesoModificarMarcas.php";
       break;
       default:
         echo '<table class= "celdaColumna">';

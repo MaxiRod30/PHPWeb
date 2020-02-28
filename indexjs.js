@@ -12,13 +12,12 @@ function menu_close() {
 }
 
 // ****************************************************************
-function CheckMARCA(id, form) {
-    // preparar mensaje y control de error
-
+function CheckMARCA() {
+    // preparar mensaje y control de error;
     var mensaje = "POR FAVOR!: \n";
     var error = false;
     // capturar datos del formulario
-    var nomMarca = document.getElementById(id).value;
+    var nomMarca = document.getElementById("idMarca").value;
     // validar datos
     if (nomMarca == "") {
         error = true;
@@ -30,6 +29,45 @@ function CheckMARCA(id, form) {
         window.alert(mensaje);
     } else {
         // enviar formulario
-        document.getElementById(form).submit();
+        document.getElementById("dataFRM_MARCAS").submit();
     } // endif                        
+} // end function
+// ****************************************************************
+
+// ****************************************************************
+function CheckMARCA_UP() {
+    // preparar mensaje y control de error;
+
+    var mensaje = "POR FAVOR!: \n";
+    var error = false;
+    // capturar datos del formulario
+    var MarcaID = document.getElementById("idMarcaID");
+    var MarcaNOM = document.getElementById("idMarcaNOM").value;
+    // validar datos
+    if (MarcaNOM == "") {
+        error = true;
+        mensaje = mensaje + "Escriba una marca Por Favor!\n";
+    } // endif
+    // controlar error
+    if (error) {
+        // mostrar mensaje de error
+        window.alert(mensaje);
+    } else {
+        // enviar formulario
+        document.getElementById("idMarcaID").disabled = false;
+        document.getElementById("dataFRM_MARCAS_UP").submit();
+    } // endif                        
+} // end function
+
+// ****************************************************************
+
+function ConfirmaDELLST(id, orden, tipo) {
+    // window.alert('ProcesoDEL.php?ID='+id+'&DTO='+filtro+'&ORD='+orden+'&TIPO='+tipo);
+    // confirmar eliminar registro
+    var confirma = window.confirm("está seguro de eliminar el registro?");
+    // evaluar confirmación
+    if (confirma) {
+        // enviar al proceso de liminación
+        window.location = 'Administrador/Marcas/ProcesoEliminarMarca.php?ID=' + id + '&ORD=' + orden + '&TIPO=' + tipo
+    } // endif
 } // end function
