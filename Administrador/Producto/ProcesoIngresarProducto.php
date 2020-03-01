@@ -10,7 +10,7 @@
     if (is_uploaded_file($_FILES["nameFotoProducto"]["tmp_name"])) {
         $nombreTMP   = $_FILES["nameFotoProducto"]["tmp_name"];
         $nombreOrig  = $_FILES["nameFotoProducto"]["name"];
-        $destino = $carpeta.$_SESSION["varIMG"].$nombreOrig;
+        $destino = $carpeta.$_SESSION["varIMG"];
         move_uploaded_file($nombreTMP,$destino);
     } else {
         header("Location: ../../Error/errorPage.php?MSG=Error al subir la foto");

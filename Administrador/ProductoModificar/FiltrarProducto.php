@@ -1,89 +1,5 @@
 <?php
 //Encabezado de la tabla
-echo "
-    <thead>
-    <tr>
-    <th>
-        <a href='index.php?ORD=productoID&TIPO=asc'>
-            <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        ID
-        <a href='index.php?ORD=productoID&TIPO=desc'>
-            <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoNOM&TIPO=asc'>
-            <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Nombre
-        <a href='index.php?ORD=productoNOM&TIPO=desc'>
-            <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoDESCRIP&TIPO=asc'>
-            <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Descripcion
-        <a href='index.php?ORD=productoDESCRI&TIPO=desc'>
-            <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoPRECIO&TIPO=asc'>
-            <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Precio
-        <a href='index.php?ORD=productoPRECIO&TIPO=desc'>
-            <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoMARCA&TIPO=asc'>
-        <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Marca
-        <a href='index.php?ORD=productoMARCA&TIPO=desc'>
-        <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoCATEG&TIPO=asc'>
-        <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Categoria
-        <a href='index.php?ORD=productoCATEG&TIPO=desc'>
-        <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-        <a href='index.php?ORD=productoPAIS&TIPO=asc'>
-        <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        Origen
-        <a href='index.php?ORD=productoPAIS&TIPO=desc'>
-        <img class='btn' src='Image/btnDown.png' />
-        </a>               
-    </th>
-    <th>
-    <a href='index.php?ORD=productoACT&TIPO=asc'>
-        <img class='btn' src='Image/btnUp.png' />
-    </a>  
-    Estado
-    <a href='index.php?ORD=productoACT&TIPO=desc'>
-        <img class='btn' src='Image/btnDown.png' />
-    </a>               
-    </th>
-    <th>
-        Foto           
-    </th>
-    <th>
-        UPD
-    </th>         
-    </tr> 
-    </thead>
-";
         // conectar al servidor
         include "../../conexionBASE.php"; 
 
@@ -133,6 +49,21 @@ echo "
     } elseif (isset($_GET["FID"])) {
         $F_FID = $_GET["FID"];
     } 
+    if (isset($_GET["ORD"])) {
+        // cargar orden especificado
+        $orden = $_GET["ORD"];    
+    } else {
+        // establecer orden por defecto
+        $orden = "productoID";
+    }  
+    // determinar tipo de orden
+    if (isset($_GET["TIP"])) {
+            // cargar tipo de orden especicado
+        $tipoOrden =$_GET["TIP"];
+    } else {
+            // establecer tipo de orden por defecto
+            $tipoOrden = "ASC";
+    }  
     if ($F_NOM=="" && $F_CAT== 0 && $F_MAR== 0 && $F_ORG== "" && $F_PMIN == "" && $F_PMAX == "" && $F_EST == "" && $F_FID == ""){
         $filtro="";
     }else{
@@ -148,7 +79,7 @@ echo "
         //------CATEGORIA------
         if ($F_CAT==0){
             $filtroCAT = "";
-        }else {
+        }else {  
             $filtroCAT = " productoCATEG='$F_CAT' ";
         } 
         //------MARCA------
@@ -220,21 +151,6 @@ echo "
             }
         
     }
-        if (isset($_GET["ORD"])) {
-            // cargar orden especificado
-            $orden = $_GET["ORD"];    
-        } else {
-            // establecer orden por defecto
-            $orden = "productoID";
-        }  
-        // determinar tipo de orden
-        if (isset($_GET["TIPO"])) {
-                // cargar tipo de orden especicado
-            $tipoOrden =$_GET["TIPO"];
-        } else {
-                // establecer tipo de orden por defecto
-                $tipoOrden = "ASC";
-        }  
 
         $sql  = "SELECT p.productoID,p.productoNOM,p.productoDESCRIP,p.productoPRECIO,m.marcasNOM,c.categoriasNOM,p.productoPAIS,p.productoIMG,p.productoACT ";
         $sql .= "FROM producto AS p ";
@@ -279,14 +195,14 @@ echo "
                 echo "    <img  class = 'foto' src='$fotoProducto'/>";
                 echo " </td>\n";
                 echo " <td  style='text-align: center;'>\n";
-                echo "  <a href='Administrador/Categoria/ProcesoModificarCategoria.php?ID= $idProducto '>\n";
+                echo "  <a href='Administrador/ProductoModificar/ModificarProducto.php?ID= $idProducto '>\n";
                 echo "    <img class='btn' src='Image/icoUPD2.jpg' />";
                 echo "  </a>\n";
                 echo " </td>\n";
                                                                         
                 echo "</tr>\n";
             }
-            echo "</tbody>\n";
+             echo "</tbody>\n";
      } // end while
         // cerrar conexión
         mysql_close($conex);

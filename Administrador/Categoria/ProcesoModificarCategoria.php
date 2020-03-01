@@ -63,7 +63,7 @@
     $privilegio= $_SESSION["userPrivilegio"];
     if ($privilegio == "Administrador"){
       echo '<a href="../../Administrador/Categoria/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
-      echo '<a href="Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
+      echo '<a href="../../Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
     }
   ?>
 </nav>

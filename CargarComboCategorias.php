@@ -1,4 +1,5 @@
 <?php
+
     // conectar al Servidor
     include "conexionBASE.php";
     // crear sentencia SQL
