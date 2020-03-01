@@ -17,6 +17,7 @@
             echo "<option value='$id'>$marcasNOM </option>\n";
         } // end while
         // cerrar conexión
+        echo "</select>";
         mysql_close($conex);
     } // endif  
 

@@ -20,6 +20,7 @@
  p,
  blockquote,
  th,
+ thead,
  td {
      padding: 0;
      margin: 0;
@@ -191,4 +192,99 @@
  .foto {
      width: 50px;
      height: 50px;
+ }
+ /*agregado*/
+ 
+ div#head {
+     border-bottom-style: solid;
+     border-bottom-width: 2px;
+     border-bottom-color: #0B4F70;
+ }
+ 
+ div#head h1 {
+     font-family: arial;
+     font-size: 24px;
+     color: #097FBA;
+     letter-spacing: 2px;
+     display: inline;
+ }
+ 
+ div#menu {
+     margin-top: 20px;
+ }
+ /*Marcas*/
+ 
+ div#contenido {
+     width: 100%;
+     margin: 40px auto;
+ }
+ 
+ fieldset#dsc {
+     font-family: calibri;
+     font-size: 14px;
+     font-style: italic;
+     text-align: justify;
+     padding: 20px;
+ }
+ 
+ fieldset#frm {
+     width: 280px;
+     font-family: arial;
+     font-size: 12px;
+     font-style: normal;
+     text-align: right;
+     padding: 20px;
+ }
+ 
+ legend {
+     font-family: arial;
+     font-size: 12px;
+     font-style: normal;
+     font-weight: bold;
+     background-color: rgb(9, 81, 238);
+     color: white;
+     letter-spacing: 2px;
+     padding: 5px;
+ }
+ 
+ table#lst {
+     width: 100%;
+     font-style: normal;
+ }
+ 
+ table#lst th {
+     background-color: rgb(9, 81, 238);
+     color: white;
+     text-align: center;
+ }
+ 
+ table#lst td {
+     border-bottom-style: solid;
+     border-bottom-width: 2px;
+     border-bottom-color: #3D9DCD;
+     text-align: center;
+ }
+ 
+ .txtERR {
+     font-weight: bold;
+     color: #DC0A0A;
+     letter-spacing: 3px;
+ }
+ 
+ .txtMSG {
+     font-weight: bold;
+     color: #085276;
+     letter-spacing: 3px;
+ }
+ 
+ img.btn {
+     width: 10px;
+     height: 10px;
+     cursor: pointer;
+ }
+ 
+ a.reg {
+     color: green;
+     text-decoration: none;
+     background-color: transparent;
  }

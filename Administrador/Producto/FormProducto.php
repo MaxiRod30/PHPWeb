@@ -1,22 +1,6 @@
 
 <div class="boxRegistro">
     <h1>Ingreso de Producto</h1>
-        <form id="dataFRM_FILTRO" action="Administrador/Marcas/ProcesoIngresarMarcas.php" method="POST" class="formulario">
-            <hr>
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="nameMarca" id="idMarca" placeholder="Ingrese nombre de la Marca" required/>
-            <hr>
-            <a href="#" class="button" onclick="CheckMARCA()">Guardar Marca</a>
-        </form>
-
         <form id="dataFRM_PRODUCTO" action="Administrador/Producto/ProcesoIngresarProducto.php"enctype="multipart/form-data" method="POST" class="formulario">
             <hr>
             <label id="icon" for="name"><i class="icon-user"></i></label>

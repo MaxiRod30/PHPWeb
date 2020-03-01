@@ -188,3 +188,26 @@ function CheckPRODUCTO() {
         document.getElementById("dataFRM_PRODUCTO").submit();
     } // endif                        
 } // end function
+
+// *****************************************************************
+function ActualizarTabla(idtable, idNom, idCategoria, idMarcas, idOrigen, idPrecioMin, idPrecioMax, idEstado, idproducto) {
+
+    var nombreproduc = document.getElementById(idNom).value;
+    var categoriaproduc = document.getElementById(idCategoria).value;
+    var marcasproduc = document.getElementById(idMarcas).value;
+    var origenproduc = document.getElementById(idOrigen).value;
+    var PrecioMinproduc = document.getElementById(idPrecioMin).value;
+    var PrecioMaxproduc = document.getElementById(idPrecioMax).value;
+    var Estadoproduc = document.getElementById(idEstado).value;
+    var IDproduc = document.getElementById(idproducto).value;
+
+    var xmlhttp = new XMLHttpRequest();
+    var bantera = true;
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(idtable).innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("GET", "Administrador/ProductoModificar/FiltrarProducto.php?FNOM=" + nombreproduc + "&FCAT=" + categoriaproduc + "&FMAR=" + marcasproduc + "&FORG=" + origenproduc + "&FPMIN=" + PrecioMinproduc + "&FPMAX=" + PrecioMaxproduc + "&FEST=" + Estadoproduc + "&FID=" + IDproduc, true);
+    xmlhttp.send();
+}
