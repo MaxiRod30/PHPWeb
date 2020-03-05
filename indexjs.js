@@ -352,6 +352,29 @@ function CheckPRODUCTOMOD() {
         window.alert(mensaje);
     } else {
         // enviar formulario
+        document.getElementById("idProductoID").disabled = false;
         document.getElementById("dataFRM_PRODUCTOMOD").submit();
     } // endif                        
 } // end function
+// *****************************************************************
+function ActualizarProductoConsumidor(idtable, idNom, idCategoria, idMarcas, idOrigen, idPrecioMin, idPrecioMax, idproducto, ORDproducto, TIPOproducto) {
+
+    var nombreproduc = document.getElementById(idNom).value;
+    var categoriaproduc = document.getElementById(idCategoria).value;
+    var marcasproduc = document.getElementById(idMarcas).value;
+    var origenproduc = document.getElementById(idOrigen).value;
+    var PrecioMinproduc = document.getElementById(idPrecioMin).value;
+    var PrecioMaxproduc = document.getElementById(idPrecioMax).value;
+    var IDproduc = document.getElementById(idproducto).value;
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById(idtable).innerHTML = this.responseText;
+            console.log(this.responseText);
+        }
+    };
+    xmlhttp.open("GET", "Consumidor/Filtros/FiltroBuscarProducto.php?FNOM=" + nombreproduc + "&FCAT=" + categoriaproduc + "&FMAR=" + marcasproduc + "&FORG=" + origenproduc + "&FPMIN=" + PrecioMinproduc + "&FPMAX=" + PrecioMaxproduc + "&FID=" + IDproduc + "&ORD=" + ORDproducto + "&TIP=" + TIPOproducto, true);
+    xmlhttp.send();
+}

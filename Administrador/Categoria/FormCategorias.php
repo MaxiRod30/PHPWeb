@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="Estilos/styleCategoria.css" />
 <?php
 
 echo '

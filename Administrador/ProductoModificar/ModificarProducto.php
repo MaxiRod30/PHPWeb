@@ -108,7 +108,7 @@
         <form id="dataFRM_PRODUCTOMOD" action="ModificarProductoUP.php"enctype="multipart/form-data" method="POST" class="formulario">
             <hr>
             <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input  <?php echo "value='$idProducto '" ?> 
+            <input  <?php echo "value='$idProducto '" ?>  disabled
             type="text" name="nameProductoID" id="idProductoID" placeholder="Ingrese nombre del Producto" required/>
             
             <label id="icon" for="name"><i class="icon-user"></i></label>

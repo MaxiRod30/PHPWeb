@@ -7,20 +7,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Estilos/styleIndex2.css">
 <link rel="stylesheet" href="Estilos/styleIndex.css">
-<link rel="stylesheet" href="Estilos/styleMarcas.css" />
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">  
+
 <script type="text/javascript" src="indexjs.js"></script>
 
 <body >
 
 <!-- Menu a la Izquierda (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_iz">
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:25%;min-width:200px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
   class="w3-bar-item w3-button">Close Menu</a>
   <a href="Consumidor/ListarTodo/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Listar Articulos</a>
-  <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
+ <?php
+     $PantallaActiva = $_SESSION["PantallaCentral"];
+      if ($PantallaActiva==1){
+  ?>
+          <div class="icono" >Nombre</div>
+          <input onkeyup ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInput" name="nameBUSNombre" id="idBUSNombre" placeholder="Ingrese nombre" required/>
+        
+          <div class="icono">ID</div>
+          <input onkeyup ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInput" name="nameBUSID" id="idBUSID" placeholder="Ingrese ID" required/>
+          
+          <div class="icono">Precio</div>
+          <input onkeyup ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInputPRECIO1" name="nameBUSPrecioMin" id="idBUSPrecioMin" placeholder="Minimo" required/>
+          <input onkeyup ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInputPRECIO2" name="nameBUSPrecioMax" id="idBUSPrecioMax" placeholder="Maximo" required/>
+
+          <div class="icono">Marcas</div>
+          <select class="txtInput" onchange ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInput" id="idBUSMarca" name="nameBUSMarca">
+              <option value="0">-- Seleccione Marcas. --</option>
+  <?php
+                // crear opciones
+                include "CargarComboMarcas.php";
+  ?> 
+          </select>
+
+          <div class="icono">Categoria</div>
+          <select onchange ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');"  class="txtInput" id="idBUSCategoria" name="nameBUSCategoria">
+              <option value="0">-- Seleccione Categoria. --</option>
+  <?php
+                // crear opciones
+                include "CargarComboCategorias.php";
+  ?> 
+          </select>
+
+          <div class="icono">Origen</div>
+          <select onchange ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInput" id="idBUSOrigen" name="nameBUSOrigen">
+              <option value="">-- Seleccione Origen. --</option>
+              <option value="China">China</option>
+              <option value="UK">UK</option>
+              <option value="USA">USA</option>         
+          </select>
+  <?php
+      }
+  ?>
   <?php
     $privilegio= $_SESSION["userPrivilegio"];
     if ($privilegio == "Administrador"){
@@ -33,10 +74,11 @@
 </nav>
 
 <!-- Menu a la derecha (hidden by default)  -->
-<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 60%;display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_dr">
+<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 80%;display:none;z-index:2;width:30%;min-width:200px" id="menu_usr_dr">
+  <a href="javascript:void(0)" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Menu</a>  
   <a href="CambiarClave/CambiarClave.php" onclick="menu_close()" class="w3-bar-item w3-button">Cambiar Contraseña</a>
   <a href="LoginAndRegister/ProcesoLogOut.php" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Sesion</a>
-  <a href="javascript:void(0)" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Menu</a>
+
 </nav>
 
 <!-- Top menu -->
@@ -63,8 +105,8 @@
     
     switch ($PantallaActiva) {
       case 1:
-        echo '<table class= "celdaColumna">';
-          include "CargaProductoDatosBASE.php";
+        echo '<table id="consumidorTable" class= "celdaColumna">';
+          include "Consumidor/ListarTodo/CargaProductoDatosBASE.php";
         echo "</table>";
       break;
       case 100:
@@ -81,7 +123,7 @@
       break;
       default:
         echo '<table class= "celdaColumna">';
-          include "CargaProductoDatosBASE.php";
+          include "Consumidor/ListarTodo/CargaProductoDatosBASE.php";
         echo "</table>";
       }
       

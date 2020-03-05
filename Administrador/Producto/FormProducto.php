@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="Estilos/styleProducto.css" />
 <div class="boxRegistro">
     <h1>Ingreso de Producto</h1>
         <form id="dataFRM_PRODUCTO" action="Administrador/Producto/ProcesoIngresarProducto.php"enctype="multipart/form-data" method="POST" class="formulario">
