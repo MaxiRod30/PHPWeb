@@ -56,15 +56,17 @@
 <!-- Menu a la Izquierda (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
+    class="w3-bar-item w3-button">Cerrar Menu</a>  
+  <a href="../../Consumidor/inicio.php" onclick="menu_close()" class="w3-bar-item w3-button">Inicio</a>
   <a href="../../Consumidor/ListarTodo/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Listar Articulos</a>
-  <a href="#about" onclick="menu_close()" class="w3-bar-item w3-button">About</a>
   <?php
     $privilegio= $_SESSION["userPrivilegio"];
     if ($privilegio == "Administrador"){
-      echo '<a href="../../Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Ingresar Marcas</a>';
-      echo '<a href="../../Administrador/EliminacionArticulos/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Eliminacion Articulos</a>';
-    }
+      echo '<a href="../../Administrador/Marcas/MoverPantMarcas.php" onclick="menu_close()" class="w3-bar-item w3-button">Marcas</a>';
+      echo '<a href="../../Administrador/Categoria/MoverPantCategorias.php" onclick="menu_close()" class="w3-bar-item w3-button">Categorias</a>';
+      echo '<a href="../../Administrador/Producto/MoverPantProducto.php" onclick="menu_close()" class="w3-bar-item w3-button">Producto</a>';
+      echo '<a href="../../Administrador/ProductoModificar/MoverPantProducto.php" onclick="menu_close()" class="w3-bar-item w3-button">Producto Modificar</a>';
+   }
   ?>
 </nav>
 

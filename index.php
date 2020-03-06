@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>ShopCamWeb</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Estilos/styleIndex2.css">
@@ -18,12 +18,14 @@
 <!-- Menu a la Izquierda (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:25%;min-width:200px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
+  class="w3-bar-item w3-button">Cerrar Menu</a>  
+  <a href="Consumidor/inicio.php" onclick="menu_close()" class="w3-bar-item w3-button">Inicio</a>
   <a href="Consumidor/ListarTodo/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Listar Articulos</a>
  <?php
      $PantallaActiva = $_SESSION["PantallaCentral"];
       if ($PantallaActiva==1){
   ?>
+          <div class="icono" >Filtros</div>
           <div class="icono" >Nombre</div>
           <input onkeyup ="ActualizarProductoConsumidor('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="txtInput" name="nameBUSNombre" id="idBUSNombre" placeholder="Ingrese nombre" required/>
         
@@ -91,7 +93,7 @@
       echo "<div class='w3-button w3-padding-16 w3-right' onclick='menu_dr_open()'>$nombre</div>";
     ?>
 
-    <div class="w3-center w3-padding-16">Mi pagina</div>
+    <div class="w3-center w3-padding-16">ShopCamWeb</div>
   </div>
 </div>
   
@@ -108,7 +110,19 @@
         echo '<table id="consumidorTable" class= "celdaColumna">';
           include "Consumidor/ListarTodo/CargaProductoDatosBASE.php";
         echo "</table>";
+        echo"<Footer>";
+  ?>
+         <a href="#" onclick="imprimirproducto('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="w3-bar-item w3-button">Imprimir en PDF</a>
+  <?php      
+        echo"</Footer>";
+
       break;
+      case 20:
+
+        include "Consumidor/inicio.php"; 
+      
+      break;
+
       case 100:
         include "Administrador/Marcas/FormMarcas.php"; 
       break;
@@ -128,5 +142,8 @@
       }
       
   ?>
+
+  
 </body>
+
 </html>

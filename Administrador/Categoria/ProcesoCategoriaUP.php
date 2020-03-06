@@ -10,14 +10,27 @@
     $id             = utf8_decode($_POST["nameID"]);
     $nombre         = utf8_decode($_POST["nameCategoria"]);
     // crear sentencia SQL para modificar registro
-    $sql  = "UPDATE categorias SET categoriasNOM='$nombre' WHERE categoriasID='$id'";
+    // controlar exitencia
+    $sql = "SELECT * FROM categorias WHERE categoriasNOM='$nombre'";
+    // ejecutar sentencia de control
+    $result = mysql_query($sql,$conex);
+    // determinar exitencia
+    if (mysql_num_rows($result)==0) {
+        // crear sentencia SQL para insertar
+        $sql  = "UPDATE categorias SET categoriasNOM='$nombre' WHERE categoriasID='$id'";
 
-    // depurar instrucción SQL
-    // die($sql);
-    // ejecutar sentencia SQL
-    mysql_query($sql,$conex);
-    // cerrar conexión
-    mysql_close($conex);
-    // volver al formulario de actualización
-    header("Location: ../../index.php");                            
+        // ejecutar sentencia SQL
+         mysql_query($sql,$conex);
+        // cerrar conexión
+        mysql_close($conex);
+     // volver automáticamente al formulario (redirigir)
+     header("location: ../../DatosOK/CambioContraOK.php?MSG=Se guardo correctamente la Categoria");        
+ } else {
+     // cerrar conexión
+     mysql_close($conex);        
+     // enviar mensaje de error
+     header("location:  ../../Error/errorPage.php?MSG=Categoria ya existe.");   
+
+ } // endif
+                           
 ?>

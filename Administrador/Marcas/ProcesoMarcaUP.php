@@ -9,15 +9,25 @@
     // cargar y convertir datos del formulario
     $id             = utf8_decode($_POST["nameID"]);
     $nombre         = utf8_decode($_POST["nameMarca"]);
-    // crear sentencia SQL para modificar registro
-    $sql  = "UPDATE marcas SET marcasNOM='$nombre' WHERE marcasID='$id'";
 
-    // depurar instrucción SQL
-    // die($sql);
-    // ejecutar sentencia SQL
-    mysql_query($sql,$conex);
-    // cerrar conexión
-    mysql_close($conex);
-    // volver al formulario de actualización
-    header("Location: ../../index.php");                            
+    $sql = "SELECT * FROM marcas WHERE marcasNOM='$nombre'";
+    // ejecutar sentencia de control
+    $result = mysql_query($sql,$conex);
+    // determinar exitencia
+    if (mysql_num_rows($result)==0) {
+        // crear sentencia SQL para insertar
+        $sql  = "UPDATE marcas SET marcasNOM='$nombre' WHERE marcasID='$id'";
+        // ejecutar sentencia SQL
+        mysql_query($sql,$conex);
+        // cerrar conexión
+        mysql_close($conex);
+     // volver automáticamente al formulario (redirigir)
+     header("location: ../../DatosOK/CambioContraOK.php?MSG=Se guardo correctamente la Categoria");        
+    } else {
+        // cerrar conexión
+        mysql_close($conex);        
+        // enviar mensaje de error
+        header("location:  ../../Error/errorPage.php?MSG=Categoria ya existe.");   
+ } // endif
+                      
 ?>

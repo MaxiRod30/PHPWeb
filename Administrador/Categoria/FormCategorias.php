@@ -45,8 +45,8 @@ echo '
 
         if (mysql_num_rows($result)==0) {
             // enviar mensaje de error
-            header("Location: Error/errorPage.php?MSG=No existen datos para el mostrar / $orden  / $tipoOrden / $sql");
-        } // endif
+            echo "NO SE ENCONTRO DATOS"; 
+        }else{ // endif
         // crear cabecera de grilla de datos
         echo "
          <tr>
@@ -90,7 +90,7 @@ echo '
             echo "  </a>\n";
             echo " </td>\n";
             echo " <td style='text-align: center;'>\n";
-            echo "  <a href=\"javascript:ConfirmaDELCAT($id,'$orden','$tipoOrden');\">\n";
+            echo "  <a href=\"javascript:ConfirmaDELCAT($id,'$orden','$tipoOrden','$nombreCategoria');\">\n";
             echo "    <img class='btn' src='Image/icoDEL.jpg' />";
             echo "  </a>\n";            
             echo " </td>\n";                                                                        
@@ -98,6 +98,7 @@ echo '
         } // end while
         // cerrar conexión
         mysql_close($conex);
+      }
 echo '
         </table>
         </fieldset>

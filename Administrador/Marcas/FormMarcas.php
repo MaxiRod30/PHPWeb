@@ -45,8 +45,8 @@ echo '
 
         if (mysql_num_rows($result)==0) {
             // enviar mensaje de error
-            header("Location: Error/errorPage.php?MSG=No existen datos para el mostrar / $orden  / $tipoOrden / $sql");
-        } // endif
+            echo "NO SE ENCONTRO DATOS"; 
+        } else{
         // crear cabecera de grilla de datos
         echo "
          <tr>
@@ -98,6 +98,7 @@ echo '
         } // end while
         // cerrar conexión
         mysql_close($conex);
+      }
 echo '
         </table>
         </fieldset>

@@ -1,7 +1,6 @@
 // *****************************************************************
 function CheckLOG() {
     // preparar mensaje y control de error
-    window.alert("Entre");
     var mensaje = "POR FAVOR!: \n";
     var error = false;
     // capturar datos del formulario
