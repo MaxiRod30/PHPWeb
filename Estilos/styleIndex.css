@@ -522,7 +522,7 @@ a {
 .w3-sidebar {
     height: 100%;
     width: 200px;
-    background-color: #fff;
+    background-color: rgb(253, 253, 253);
     position: fixed!important;
     z-index: 1;
     overflow: auto
@@ -1357,7 +1357,7 @@ a {
 }
 
 .w3-topbar {
-    border-top: 6px solid #ccc!important
+    border-top: 6px solid rgb(211, 172, 172)!important
 }
 
 .w3-bottombar {
@@ -1445,7 +1445,7 @@ a {
 
 .w3-button:hover {
     color: #000!important;
-    background-color: #ccc!important
+    background-color: rgba(122, 192, 201, 0.863)!important
 }
 
 .w3-transparent,
@@ -1590,8 +1590,8 @@ a {
 
 .w3-white,
 .w3-hover-white:hover {
-    color: #000!important;
-    background-color: #fff!important
+    color: rgb(0, 0, 0)!important;
+    background-color: rgb(196, 216, 216)!important
 }
 
 .w3-black,

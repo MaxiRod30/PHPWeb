@@ -14,6 +14,7 @@
                 // crear opciones
                 include "CargarComboCategorias.php";
               ?> 
+            </select>
 
             <label id="icon" for="name"><i class="icon-user"></i></label>
             <input onkeyup="ActualizarTabla('lst','idBUSNombre','idCategoria','idMarca','idOrigen','idPrecioMin','idPrecioMax','idEstado', 'idBUSID','productoID','asc');" type="text" name="namePrecioMin" id="idPrecioMin" placeholder="Ingrese Precio minimo" required/>
@@ -25,6 +26,7 @@
                 // crear opciones
                 include "CargarComboMarcas.php";
               ?> 
+            </select>
 
             <label id="icon" for="name"><i class="icon-user"></i></label>
             <input onkeyup="ActualizarTabla('lst','idBUSNombre','idCategoria','idMarca','idOrigen','idPrecioMin','idPrecioMax','idEstado', 'idBUSID','productoID','asc');" type="text" name="namePrecioMax" id="idPrecioMax" placeholder="Ingrese Precio maximo" required/>

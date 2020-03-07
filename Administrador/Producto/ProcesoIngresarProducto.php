@@ -49,6 +49,6 @@
        // cerrar conexión
        mysql_close($conex);        
        // enviar mensaje de error
-       header("location: ../../Error/errorPage.php?MSG=el producto ya exite");        
+       header("location: ../../Error/errorPage.php?MSG=El producto ya exite");        
    } // endif
  ?>

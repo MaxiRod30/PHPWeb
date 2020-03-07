@@ -1,4 +1,27 @@
-<?php include "../CtrlSession.php"; ?>
+<?php
+
+$cookie_name = "CK_login";
+$session_name = "nombreLogueado";
+
+// CONTROL DE SESSION
+session_start();
+
+if (!isset($_SESSION[$session_name])) {
+    // mensaje de error()
+    header("Location: ../LoginAndRegister/FormLogin.php");
+} else {
+    // chequear cookie
+
+    if (isset($_COOKIE[$cookie_name])) {
+        // resetear Tiempo de la cookie 
+        setcookie($cookie_name,"usrOK",time()+1800);
+    } else {
+        // enviar mensaje
+        // session_destroy();
+        header("Location: ../LoginAndRegister/FormLogin.php");
+    } // endif
+} //  endif
+?>
 
 <!DOCTYPE html>
 <html>
@@ -116,7 +139,7 @@
 <!-- Menu a la Izquierda (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:25%;min-width:200px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
-  class="w3-bar-item w3-button">Close Menu</a>  
+  class="w3-bar-item w3-button">Cerrar Menu</a>  
   <a href="../Consumidor/inicio.php" onclick="menu_close()" class="w3-bar-item w3-button">Inicio</a>
   <a href="../Consumidor/ListarTodo/index.php" onclick="menu_close()" class="w3-bar-item w3-button">Listar Articulos</a>
 
@@ -141,7 +164,7 @@
 
 <!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  <div class="w3-white w3-xlarge" style="max-width:1400px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="menu_iz_open()">☰</div>
 
     <?php
@@ -155,7 +178,7 @@
   
 <!-- !PAGE CONTENT! -->
 <!--  -->
-<div class="w3-main w3-content w3-padding" style="max-width:1000px;margin-top:100px">
+<div class="w3-main w3-content w3-padding" style="max-width:2000px;margin-top:50px">
 
 
 

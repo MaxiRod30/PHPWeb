@@ -22,7 +22,7 @@
     // controlar existencia
     if (mysql_num_rows($result)==0) {
         // enviar mensaje de error
-        header("Location: ../../Error/errorPage.php?MSG=ID de Persona INEXISTENTE");
+        header("Location: ../../Error/errorPage.php?MSG=ID de Marca INEXISTENTE");
     } // endif
     // cargar registro
     $regPERS = mysql_fetch_array($result);
@@ -54,7 +54,7 @@
 <body ondblclick="menu_close()">
 
 <!-- Menu a la Izquierda (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_iz">
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:25%;min-width:200px" id="menu_usr_iz">
   <a href="javascript:void(0)" onclick="menu_close()"
     class="w3-bar-item w3-button">Cerrar Menu</a>  
   <a href="../../Consumidor/inicio.php" onclick="menu_close()" class="w3-bar-item w3-button">Inicio</a>
@@ -71,15 +71,15 @@
 </nav>
 
 <!-- Menu a la derecha (hidden by default)  -->
-<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 60%;display:none;z-index:2;width:40%;min-width:300px" id="menu_usr_dr">
+<nav class=" w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right" style="margin-left: 80%;display:none;z-index:2;width:30%;min-width:200px" id="menu_usr_dr">
+  <a href="javascript:void(0)" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Menu</a>  
   <a href="../../CambiarClave/CambiarClave.php" onclick="menu_close()" class="w3-bar-item w3-button">Cambiar Contraseña</a>
   <a href="../../LoginAndRegister/ProcesoLogOut.php" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Sesion</a>
-  <a href="javascript:void(0)" onclick="menu_close()" class="w3-bar-item w3-button">Cerrar Menu</a>
 </nav>
 
 <!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  <div class="w3-white w3-xlarge" style="max-width:1400px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="menu_iz_open()">☰</div>
 
     <?php
@@ -87,7 +87,7 @@
       echo "<div class='w3-button w3-padding-16 w3-right' onclick='menu_dr_open()'>$nombre</div>";
     ?>
 
-    <div class="w3-center w3-padding-16">Mi pagina</div>
+    <div class="w3-center w3-padding-16">ShopCamWeb</div>
   </div>
 </div>
   

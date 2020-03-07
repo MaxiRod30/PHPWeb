@@ -25,7 +25,7 @@
 
         $nombre = $_SESSION["nombreLogueado"];
 
-        echo "<h2>  Gracias $nombre por usar el sistema</h2>\n";
+        echo "<h2>     Gracias $nombre por usar el sistema</h2>\n";
 
         
         // destruir sesión

@@ -15,7 +15,7 @@
     // confirmar existencia
     if (mysql_num_rows($result)==0) {
         // enviar mensaje de error
-        header("Location: ../../Error/errorPage.php?MSG=No hay datos");
+        echo "<div> NO HAY DATOS EN EL SISTEMA!!! </div>";
     } else 
     {
         // generar lista

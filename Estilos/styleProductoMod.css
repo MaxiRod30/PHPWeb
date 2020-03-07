@@ -53,9 +53,10 @@
  .boxRegistro {
      opacity: 0.91;
      margin: 10% auto;
+     margin-left: -6%;
      margin-top: 5%;
-     width: 100%;
-     height: 60%;
+     width: 120%;
+     height: 80%;
      -webkit-border-radius: 8px/7px;
      -moz-border-radius: 8px/7px;
      border-radius: 8px/7px;

@@ -161,7 +161,8 @@
     } else 
     {
         // generar lista
-        $contenido='<table id="consumidorTable" class= "celdaColumna">';
+        $contenido='<div class="txtInput">LISTA DE PRODUCTOS</div>';
+        $contenido.='<table id="consumidorTable" class= "celdaColumna">';
         $contenido.="<tr> <hr>";
         $num = 0;
         while($regPRD = mysql_fetch_array($result))

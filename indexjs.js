@@ -213,8 +213,8 @@ function ActualizarTabla(idtable, idNom, idCategoria, idMarcas, idOrigen, idPrec
     <th>
         <a onclick="ActualizarTabla('lst','idBUSNombre','idCategoria','idMarca','idOrigen','idPrecioMin','idPrecioMax','idEstado', 'idBUSID','productoID','asc');">
             <img class='btn' src='Image/btnUp.png' />
-        </a>  
-        ID
+        </a>   
+        ID  
         <a onclick="ActualizarTabla('lst','idBUSNombre','idCategoria','idMarca','idOrigen','idPrecioMin','idPrecioMax','idEstado', 'idBUSID','productoID','desc');" >
             <img class='btn' src='Image/btnDown.png' />
         </a>               

@@ -22,12 +22,12 @@
         // cerrar conexión
         mysql_close($conex);
      // volver automáticamente al formulario (redirigir)
-     header("location: ../../DatosOK/CambioContraOK.php?MSG=Se guardo correctamente la Categoria");        
+     header("location: ../../DatosOK/CambioContraOK.php?MSG=Se guardo correctamente la Marca");        
     } else {
         // cerrar conexión
         mysql_close($conex);        
         // enviar mensaje de error
-        header("location:  ../../Error/errorPage.php?MSG=Categoria ya existe.");   
+        header("location:  ../../Error/errorPage.php?MSG=La marca ya existe.");   
  } // endif
                       
 ?>

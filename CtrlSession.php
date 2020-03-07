@@ -13,7 +13,7 @@
 
         if (isset($_COOKIE[$cookie_name])) {
             // resetear Tiempo de la cookie 
-            setcookie($cookie_name,"usrOK",time()+6000);
+            setcookie($cookie_name,"usrOK",time()+1800);
         } else {
             // enviar mensaje
             // session_destroy();

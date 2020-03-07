@@ -17,13 +17,9 @@
 <body onload= "LogOUT();" >
 <div class="boxRegistro">
 
-   <?php
-        // capturar mensaje de error    
-        $mensaje = $_GET["MSG"];
-        echo "<h1 class='txtERR'>  $mensaje</h1>\n";
-        
-   ?>
-
+    <h1>ERROR EN USUARIO Y CONTRASEÑA, RESCRIBA !!</h1>
+    <hr>
+    <a href="../index.php" class="button2">Reitentar</a>
 </div>
 
 </body>

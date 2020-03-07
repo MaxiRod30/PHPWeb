@@ -8,7 +8,7 @@
     // confirmar existencia
     if (mysql_num_rows($result)==0) {
         // enviar mensaje de error
-        header("Location: Error/errorPage.php?MSG=Debe agregar Marcas");
+        echo "Debe agregar Marcas";
     } else {
         // generar lista
         while ($regs = mysql_fetch_array($result)) {
@@ -18,8 +18,8 @@
         } // end while
         // cerrar conexión
         echo "</select>";
-        mysql_close($conex);
+        
     } // endif  
-
+    mysql_close($conex);
 
 ?>

@@ -13,7 +13,7 @@
 
 <script type="text/javascript" src="indexjs.js"></script>
 
-<body >
+<body ondblclick="menu_close()" >
 
 <!-- Menu a la Izquierda (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:25%;min-width:200px" id="menu_usr_iz">
@@ -85,7 +85,7 @@
 
 <!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+  <div class="w3-white w3-xlarge" style="max-width:1400px;margin:auto">
     <div class="w3-button w3-padding-16 w3-left" onclick="menu_iz_open()">☰</div>
 
     <?php
@@ -135,10 +135,17 @@
       case 103:
         include "Administrador/ProductoModificar/FormProducto.php"; 
       break;
+
       default:
-        echo '<table class= "celdaColumna">';
-          include "Consumidor/ListarTodo/CargaProductoDatosBASE.php";
-        echo "</table>";
+      echo '<table id="consumidorTable" class= "celdaColumna">';
+      include "Consumidor/ListarTodo/CargaProductoDatosBASE.php";
+      echo "</table>";
+      echo"<Footer>";
+      ?>
+        <a href="#" onclick="imprimirproducto('consumidorTable', 'idBUSNombre', 'idBUSCategoria', 'idBUSMarca', 'idBUSOrigen', 'idBUSPrecioMin', 'idBUSPrecioMax', 'idBUSID', 'productoID', 'asc');" class="w3-bar-item w3-button">Imprimir en PDF</a>
+      <?php      
+        echo"</Footer>";
+        
       }
       
   ?>
