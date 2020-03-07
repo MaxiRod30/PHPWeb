@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso Web 2.0 - BIOS" />
+	<title>MiniSistema Personas - FICHEROS CSV</title>
+    <link rel="stylesheet" href="EstilosPersonas.css"/>
+    <script type="text/javascript" src="FuncionesPersonas.js"></script>
+</head>
+
+<body>
+<!-- SECCION CABECERA -->
+<div id="head">
+  <h1>MiniSistema Personas - FICHEROS CSV</h1>
+</div>
+<!-- SECCION MENU -->
+<div id="menu">
+  <a href="index.html">Inicio</a>
+  <a href="FormPersonasINS.html">Insertar</a>
+  <a href="ProcesoPersonasVER.php">Visualizar</a>
+  <a href="javascript:window.close();">Salir</a>
+</div>
+<!-- SECCION CONTENIDO -->
+<div id="contenido">
+  <fieldset id="frm">
+   <legend>Insertar</legend>
+   <form id="dataFRM" action="ProcesoPersonasINS.php" method="POST">
+     <table>
+       <tr>
+         <td>Nombre:</td>
+         <td>
+           <input id="dataNOM" type="text" name="NOM" />
+         </td>
+       </tr>
+       <tr>
+         <td>Dirección:</td>
+         <td>
+           <input id="dataDIR" type="text" name="DIR" />
+         </td>
+       </tr>
+       <tr>
+         <td>Teléfono:</td>
+         <td>
+           <input id="dataTEL" type="text" name="TEL" value="+598"/>
+         </td>
+       </tr>
+       <tr>
+         <td>Departamento:</td>
+         <td>
+           <input id="dataDTO" type="text" name="DTO" />
+         </td>
+       </tr>
+       
+       <tr>
+         <td colspan="2">
+           <input type="button" value="Enviar"   onclick="CheckForm();"/>
+           <input type="reset"  value="Cancelar" />
+         </td>
+       </tr>                            
+     </table>
+   </form>
+  </fieldset>
+</div>
+
+</body>
+</html>

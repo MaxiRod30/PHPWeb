@@ -1,0 +1,22 @@
+EJERCICIOS CON ARRAYS
+---------------------
+
+01. Recorrer un array de 10 posiciones usando While y For
+02. Recorrer un array de 10 posiciones y mostrar la suma de 
+    sus valores
+03. Recorrer un array de 10 posiciones que comienza en el 
+    índice 1, mostrando solamente los valores pares.
+04. Mostrar los valores impares de un array de 10 posiciones 
+    y la suma de ellos.
+05. Buscar y presentar el mayor valor de un array de 10 
+    posiciones.
+06. Mostrar la posición y el mayor valor de un array de 10 
+    posiciones.
+07. Recorrer un array de 10 posiciones e informar:
+    - Mayor valor:
+    - Menor valor:
+    - Posición del mayor:
+    - Posición del menor:
+    - Suma de Pares:
+    - Suma de Impares:
+    - Suma Total:

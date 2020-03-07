@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso Web 2.0" />
+	<title>XHTML/CSS/Javascript - DHTML 06.Funciones CON Parámetros</title>
+    <style type="text/css">
+    
+        .boxHead {
+            position: absolute;
+            top: 10px;
+            left:10px;
+            width: 775px;
+            height: 20px;
+            background-color: orange;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: center;            
+        }
+        h1,h2 {
+            font-family: arial;
+            font-size: 18px;
+            display:  inline;            
+        }
+        .boxSup {
+            position: absolute;
+            top: 40px;
+            left:10px;
+            width: 755px;
+            height: 160px;
+            background-color: yellow;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            font-family: arial;
+            font-size: 12px;            
+        }
+        h2 {
+            font-size: 14px;
+        }
+        .boxIzda {
+            position: absolute;
+            top: 230px;
+            left:10px;
+            width: 360px;
+            height: 360px;
+            background-color: red;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            font-family: arial;
+            font-size: 12px;                                     
+        } 
+        .boxSupDcha {
+            position: absolute;
+            top: 230px;
+            left:400px;
+            width: 365px;
+            height: 160px;
+            background-color: green;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            font-family: arial;
+            font-size: 12px;                                     
+        }
+        .boxInfDcha {
+            position: absolute;
+            top: 420px;
+            left:400px;
+            width: 365px;
+            height: 170px;
+            background-color: gray;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            font-family: arial;
+            font-size: 12px;                                     
+        }                       
+        body {
+            width: 80%;
+            margin: 0px auto;
+        }        
+    
+    </style>
+    <script type="text/javascript">
+    
+        function SetBox(bx,bc,fc,ff,fs) {
+            // establece propiedades para la box especificada
+            // bx: id del box
+            // bc: color de fondo
+            // fc: color de fuente
+            // ff: tipo de fuente
+            // fs: tamaño de fuente
+            document.getElementById(bx).style.backgroundColor   = bc;
+            document.getElementById(bx).style.color             = fc;
+            document.getElementById(bx).style.fontFamily        = ff;
+            document.getElementById(bx).style.fontSize          = fs;
+        } // end function
+    
+    </script>
+</head>
+
+<body>
+<!-- SECCION CABECERA -->
+<div class="boxHead"
+     onmouseover="SetBox('texto','blue','white','calibri','14px');"
+      onmouseout="SetBox('texto','','','','');"
+>
+ <h1>XHTML/CSS/Javascript - DHTML 05.Funciones CON Parámetros</h1>
+</div>
+<!-- SECCION BOX SUPERIOR -->
+<div id="boxYellow" 
+     class="boxSup"
+     onmouseover="SetBox('boxRed','blue','white','calibri','14px');"
+      onmouseout="SetBox('boxRed','red','black','arial','12px');"
+>
+  <h2>Box Superior</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX IZQUIERDA -->
+<div id="boxRed" 
+     class="boxIzda"
+     onmouseover="SetBox('boxGreen','blue','white','calibri','14px');"
+      onmouseout="SetBox('boxGreen','green','black','arial','12px');"
+>
+  <h2>Box Izquierda</h2>
+  <p id="texto">
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX SUPERIOR DERECHA -->
+<div id="boxGreen" 
+     class="boxSupDcha"
+     onmouseover="SetBox('boxGray','blue','white','calibri','14px');"
+      onmouseout="SetBox('boxGray','gray','black','arial','12px');"
+>
+  <h2>Box Superior Derecha</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX INFERIOR DERECHA -->
+<div id="boxGray"
+     class="boxInfDcha"
+     onmouseover="SetBox('boxYellow','blue','white','calibri','14px');"
+      onmouseout="SetBox('boxYellow','yellow','black','arial','12px');"
+>
+  <h2>Box Inferior Derecha</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+
+
+</body>
+</html>

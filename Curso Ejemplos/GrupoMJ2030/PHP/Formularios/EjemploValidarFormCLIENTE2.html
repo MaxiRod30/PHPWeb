@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso Web 2.0" />
+	<title>FORMULARIOS - Validar Form CLIENTE 2</title>
+    <script type="text/javascript">
+    
+        function CheckForm() {
+            // definir mensaje y control de error
+            var mensaje = "ATENCION!!!.. ta mal:\n";
+            var error   = false;
+            // capturar datos del formulario
+            var nombre      = document.getElementById("dataNOM").value;
+            var direccion   = document.getElementById("dataDIR").value;
+            var telefono    = document.getElementById("dataTEL").value;
+            var departamento= document.getElementById("dataDTO").value;
+            // validar datos
+            if (nombre=="") {
+                error   = true;
+                mensaje = mensaje+"Nombre\n";
+            } // endif
+            if (direccion=="") {
+                error   = true;
+                mensaje = mensaje+"Dirección\n";
+            } // endif
+            if (telefono=="") {
+                error   = true;
+                mensaje = mensaje+"Teléfono no puede ser vacío\n";
+            } // endif
+            if (telefono=="+598") {
+                error   = true;
+                mensaje = mensaje+"Teléfono no puede ser código de país\n";
+            } // endif
+            if (isNaN(telefono)) {      // is Not a Number
+                error   = true;
+                mensaje = mensaje+"Teléfono debe ser numérico\n";
+            } // endif                        
+            if (departamento=="") {
+                error   = true;
+                mensaje = mensaje+"Departamento\n";
+            } // endif  
+            
+            // controlar error
+            if (error) {
+                // mostrar mensaje
+                window.alert(mensaje);
+            } else {
+                // enviar formulario
+                document.getElementById("dataFRM").submit();
+            } // endif                                                                                                                       
+        } // end function
+    
+    </script>
+</head>
+
+<body>
+  <h1>FORMULARIOS - Validar Form CLIENTE 2</h1>
+  
+  <form id="dataFRM" action="ProcesoValidarFormCLIENTE2.php" method="POST">
+    <span>Nombre:</span>
+    <input id="dataNOM" type="text" name="NOM" /><br />
+    <span>Dirección:</span>
+    <input id="dataDIR" type="text" name="DIR" /><br />
+    <span>Teléfono:</span>
+    <input id="dataTEL" type="text" name="TEL" value="+598"/><br />
+    <span>Departamento:</span>
+    <input id="dataDTO" type="text" name="DTO" /><br />
+    
+    <input type="button" value="Enviar"   onclick="CheckForm();"/>
+    <input type="reset"  value="Cancelar" />
+  </form>
+
+
+</body>
+</html>

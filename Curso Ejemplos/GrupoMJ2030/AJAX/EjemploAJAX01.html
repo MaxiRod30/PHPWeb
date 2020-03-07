@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso WEB 2.0 - AJAX" />
+	<title>Ejemplo de AJAX 01</title>
+    <script type="text/javascript">
+    
+        function cambiarTXT1() {
+            window.location= "reemplazo.html";
+        } // end function
+        
+        function cambiarTXT2() {
+            window.location= "TextoPlano.txt";
+        } // end function
+        
+        function cambiarTXT3() {
+            // inicializar Objeto AJAX
+            var xhr;
+            if (window.XMLHttpRequest) {
+                // crear objeto para chrome, fx, opera, safari
+                xhr = new XMLHttpRequest;
+            } else {
+                // crear objeto para IE5,IE6
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } // endif
+            
+            // realizar petición
+            xhr.open("POST","TextoPlano.txt",true);
+            xhr.send(null);
+            
+            // controlar petición
+            xhr.onreadystatechange = function() {
+                // window.alert(xhr.readyState);
+                if (xhr.readyState==4 && xhr.status==200) {
+                    document.getElementById("contenido").innerHTML = xhr.responseText;
+                } // endif
+            } // end function
+        } // end function        
+    
+    </script>
+</head>
+
+<body>
+ <h1>Ejemplo de AJAX 01</h1>
+ 
+ <p>
+   Este texto es generado por HTML
+ </p>
+ <div id="contenido">Este contenido va a cambiar</div>
+ 
+ <input type="button" value="Cambiar 1" onclick="cambiarTXT1();" /><br />
+ <input type="button" value="Cambiar 2" onclick="cambiarTXT2();" /><br />
+ <input type="button" value="Cambiar 3" onclick="cambiarTXT3();" /><br />  
+ <a href="reemplazo.html">reemplazar contenido</a>
+ 
+
+</body>
+</html>

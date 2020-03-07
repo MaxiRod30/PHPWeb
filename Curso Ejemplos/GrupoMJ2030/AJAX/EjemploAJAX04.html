@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso WEB 2.0 - AJAX" />
+	<title>Ejemplo de AJAX 04</title>
+    <script type="text/javascript">
+    
+        function cambiarTXT1() {
+            window.location= "reemplazo.html";
+        } // end function
+        
+        function cambiarTXT2() {
+            window.location= "TextoPlano.txt";
+        } // end function
+        
+        function cambiarTXT3() {
+            // inicializar Objeto AJAX
+            var xhr;
+            if (window.XMLHttpRequest) {
+                // crear objeto para chrome, fx, opera, safari
+                xhr = new XMLHttpRequest;
+            } else {
+                // crear objeto para IE5,IE6
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } // endif
+            
+            // realizar petición
+            xhr.open("POST","TextoPlano.txt",true);
+            xhr.send(null);
+            
+            // controlar petición
+            xhr.onreadystatechange = function() {
+                // window.alert(xhr.readyState);
+                if (xhr.readyState==4 && xhr.status==200) {
+                    document.getElementById("contenido").innerHTML = xhr.responseText;
+                } // endif
+            } // end function
+        } // end function  
+        
+        function cambiarTXT4() {
+            // inicializar Objeto AJAX
+            var xhr;
+            if (window.XMLHttpRequest) {
+                // crear objeto para chrome, fx, opera, safari, ie7+
+                xhr = new XMLHttpRequest;
+            } else {
+                // crear objeto para IE5,IE6
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } // endif
+            
+            // realizar petición
+            xhr.open("POST","ProcesoAJAX.php",true);
+            xhr.send(null);
+            
+            // controlar petición
+            xhr.onreadystatechange = function() {
+                // window.alert(xhr.readyState);
+                if (xhr.readyState==4 && xhr.status==200) {
+                    document.getElementById("contenido").innerHTML = xhr.responseText;
+                } // endif
+            } // end function
+        } // end function                
+
+        function cambiarCont(id) {
+            // inicializar Objeto AJAX
+            var xhr;
+            if (window.XMLHttpRequest) {
+                // crear objeto para chrome, fx, opera, safari, ie7+
+                xhr = new XMLHttpRequest;
+            } else {
+                // crear objeto para IE5,IE6
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } // endif
+            
+            // realizar petición
+            xhr.open("POST","ProcesoAJAX.php",true);
+            xhr.send(null);
+            
+            // controlar petición
+            xhr.onreadystatechange = function() {
+                // window.alert(xhr.readyState);
+                if (xhr.readyState==4 && xhr.status==200) {
+                    document.getElementById(id).innerHTML = xhr.responseText;
+                } // endif
+            } // end function
+        } // end function     
+    </script>
+</head>
+
+<body>
+ <h1>Ejemplo de AJAX 04</h1>
+ 
+ <p>
+   Este texto es generado por HTML
+ </p>
+ <div id="contenido">Este contenido va a cambiar</div>
+ 
+ <a href="reemplazo.html">reemplazar contenido</a>
+ <input type="button" value="redirigir con js" onclick="cambiarTXT1();" />
+ <input type="button" value="Cargar TXT con js" onclick="cambiarTXT2();" />
+ <input type="button" value="Remp Cont AJAX" onclick="cambiarTXT3();" />
+ <input type="button" value="Remp Cont AJAX-PHP" onclick="cambiarTXT4();" /><br />
+ <h3>contenidos</h3>
+ 
+ <div id="cont01">Contenido 1</div>
+ <div id="cont02">Contenido 2</div>
+ <div id="cont03">Contenido 3</div>  
+ <input type="button" value="Cambiar Cont1" onclick="cambiarCont('cont01');" />
+ <input type="button" value="Cambiar Cont2" onclick="cambiarCont('cont02');" />
+ <input type="button" value="Cambiar Cont3" onclick="cambiarCont('cont03');" />      
+
+</body>
+</html>

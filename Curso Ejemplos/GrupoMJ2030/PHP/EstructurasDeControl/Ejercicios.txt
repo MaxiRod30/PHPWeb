@@ -1,0 +1,39 @@
+EJERCICIOS DE ESTRUCTURAS DE CONTROL
+------------------------------------
+
+01. - Emitir un mensaje si el valor de una variable es igual
+      a 100.
+02. - Emitir un mensaje si el valor de una variable es igual
+      a 100 o no.
+03. - Emitir un mensaje si el valor de una variable se 
+      encuentra o no en el rango de 100 a 300.
+04. - Emitir un mensaje indicando si el valor de una variable
+      se encuentra dentro o fuera de los rangos válidos de
+      100 a 300 y 500 a 800.
+05. - Emitir un mensaje indicando si el valor de una variable
+      se encuentra dentro del primer o segundo rango válido de
+      100 a 300 o 500 a 800. Caso contrario también enviar un
+      mensaje adecuado.
+06. - Emitir mensajes indicativos sobre la situación del valor
+      de una variable, teniendo en cuenta los rangos de 100 a
+      300 y 500 a 800. Es decir, enviar un mensaje indicando 
+      si el valor se encuentra ANTES de los rangos, en el PRIMER
+      rango, ENTRE los rangos (no válido), en el SEGUNDO rango
+      o SUPERA los rangos.
+07. - Emitir mensajes según el siguiente criterio:
+
+      - INS: Seleccionó INSERTAR
+      - DEL: Seleccionó ELIMINAR
+      - UPD: Seleccionó ACTUALIZAR
+      - LST: Seleccionó LISTAR
+      - END: Seleccionó FINALIZAR
+
+08. - Imprimir números del 1 al 10 inclusive
+09. - Imprimir números del 1 al 10 e informar la suma de ellos.
+10. - Mostrar los números pares del 1 al 20
+11. - Mostrar los números impares del 1 al 20
+12. - Mostrar los números pares del 1 al 20 y la suma de ellos.
+13. - Mostrar números del 1 al 20 e informar:
+      - Suma de Pares
+      - Suma de Impares
+      - Suma total

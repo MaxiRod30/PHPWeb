@@ -1,0 +1,23 @@
+cambiamos la parte del proceso ver que  manda los filtro, orden  y tipo
+por get,  y lo suplantamos  por  valores en la session -  
+
+usamos la misma session,  y en los casilleros de ese array  agregas esos datos-  
+
+
+
+
+carpeta  upload :
+
+para subir carptas al sistema  
+
+si  o si :  enctype: multipart/form-data..
+y el type "file"
+anuncia al navegador que va tener que subir  un archivo con datos-
+
+viene preestablecido la capacidad que tiene  el servidor de  recibir archivos (tamaño) 
+que se  puede cambiar  configurar- 
+luego paso siguiente, verificar que se haya  subido,  luego extraer (porque queda guardado en la 
+carpeta temporal ) -  Y LE  INVENTA UN NOMBRE
+
+el archivo se guarda en un array que se llama $_FILES
+ese array tiene varios  campos,  nombre  original, tamaño,  nombre temporal, tipo de archivo.   

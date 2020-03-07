@@ -1,0 +1,11 @@
+/* declarar estilo para PDF */
+
+.externo {
+    background-color: black;
+    color: orange;
+    font-family: arial;
+    font-style: italic;
+    border-style: solid;
+    border-width: 5px;
+    border-color: red;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8" />
+	<meta name="author" content="Curso Web 2.0" />
+	<title>XHTML/CSS/Javascript - DHTML 02.OverThis</title>
+    <style type="text/css">
+    
+        .boxHead {
+            position: absolute;
+            top: 10px;
+            left:10px;
+            width: 775px;
+            height: 20px;
+            background-color: orange;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: center;            
+        }
+        h1,h2 {
+            font-family: arial;
+            font-size: 18px;
+            display:  inline;            
+        }
+        .boxSup {
+            position: absolute;
+            top: 40px;
+            left:10px;
+            width: 755px;
+            height: 160px;
+            background-color: yellow;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;            
+        }
+        h2 {
+            font-size: 14px;
+        }
+        .boxIzda {
+            position: absolute;
+            top: 230px;
+            left:10px;
+            width: 360px;
+            height: 360px;
+            background-color: red;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;                         
+        } 
+        .boxSupDcha {
+            position: absolute;
+            top: 230px;
+            left:400px;
+            width: 365px;
+            height: 160px;
+            background-color: green;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;                         
+        }
+        .boxInfDcha {
+            position: absolute;
+            top: 420px;
+            left:400px;
+            width: 365px;
+            height: 170px;
+            background-color: gray;
+            border-style: solid;
+            border-width: 2px;
+            border-color: blue;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;                         
+        }                       
+        body {
+            width: 80%;
+            margin: 0px auto;
+        }        
+    
+    </style>
+</head>
+
+<body>
+<!-- SECCION CABECERA -->
+<div class="boxHead">
+ <h1>XHTML/CSS/Javascript - DHTML 02.OverThis</h1>
+</div>
+<!-- SECCION BOX SUPERIOR -->
+<div class="boxSup"
+     onmouseover="this.style.backgroundColor='blue';"
+      onmouseout="this.style.backgroundColor='yellow';"
+>
+  <h2>Box Superior</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX IZQUIERDA -->
+<div class="boxIzda"
+     onmouseover="this.style.backgroundColor='blue';"
+      onmouseout="this.style.backgroundColor='red';"
+>
+  <h2>Box Izquierda</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX SUPERIOR DERECHA -->
+<div class="boxSupDcha"
+     onmouseover="this.style.backgroundColor='blue';"
+      onmouseout="this.style.backgroundColor='green';"
+>
+  <h2>Box Superior Derecha</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+<!-- SECCION BOX INFERIOR DERECHA -->
+<div class="boxInfDcha"
+     onmouseover="this.style.backgroundColor='blue';"
+      onmouseout="this.style.backgroundColor='gray';"
+>
+  <h2>Box Inferior Derecha</h2>
+  <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+    <p>
+    aspdfj poaisdfjpoia sjdfpoij asdpfoi jaspdoifj apsodifj
+    asdpofji apsoid fjpaoisj dfpoiaj sdfpoijasdpojfiop asdfpoi j
+    aposd asdfjpoaisdj asdfjpoiasj dfpoijasdpofji paosidj fpoiasjdf
+    asdopf fjapsodifj poaisj asdjfpoiaj sdfpoij asdpoj fipapoisdfj
+    asdpioiofj aspoidfj poiasdj fpoiajsdfpio jasdpofi japsiodfj
+    asdpiofj apsiod asdfjpoias asdjfpoiaj sdfpioj aspdoifj apiosf
+    pasodifj paoisd asdfjpoiajsdfpoij asdpofij apsodifj poaisdfj
+    aspoidfji poaisdfj poiasjdfpoija sdpfoij apsoidfj pioas dfj
+    asdpofj aposid asdfjpoiasj asdjfpoiaj sdfpoi jaspiodfj paiosdfj
+    aposd fjpoias asdjfpioaj sdfpoij asdpoj fipapsdioj
+  </p>
+</div>
+
+
+</body>
+</html>

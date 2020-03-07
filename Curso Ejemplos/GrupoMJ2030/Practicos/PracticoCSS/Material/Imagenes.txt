@@ -1,0 +1,26 @@
+Referencias del Práctico XHTML
+------------------------------
+
+Index.html
+- Imagen PuestaSol.jpg		- 682x181
+
+ElDepartamento.html
+- Imagen PuestaSol.jpg		- 682x181
+
+LaPaloma.html
+- Imagen LaPaloma.jpg		- 682x181
+- Imagen LaPalomaAerea.jpg	- 338x246
+- Imagen Hoteles.jpg		- 600x176
+- Imagen Atardecer.jpg		- 300x190
+- Imagen Ballena.jpg		- 265x190
+
+LaPedrera.html
+- Imagen LaPedrera.jpg		- 682x181
+- Imagen LaPedreraRocas01.jpg	- 300x225
+- Imagen LaPedreraRocas02.jpg	- 300x225
+- Imagen LaPedreraPlaya.jpg	- 300x225
+- Imagen LaPedreraCaballo.jpg	- 300x225
+- Imagen LaPedreraSurf.jpg	- 300x225
+- Imagen LaPedreraBalcon01.jpg	- 300x225
+- Imagen LaPedreraBalcon02.jpg	- 300x225
+- Imagen LaPedreraBalcon03.jpg	- 300x225
