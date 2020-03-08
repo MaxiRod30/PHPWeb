@@ -43,3 +43,14 @@ Finalmente debe existir un mecanismo que permita realizar una consulta dinámica
 Siempre se deberá permitir acceder a la modificación o eliminación de un registro por medio de iconos representativos, teniendo en cuenta que esto sólo lo puede realizar un administrador. 
 
 
+IMAGENES DEL SITIO WEB:
+
+![IMAGEN1](https://user-images.githubusercontent.com/55286302/76169815-c6e3f300-615a-11ea-976d-15c0c36f12f1.png)
+
+![IMAGEN2](https://user-images.githubusercontent.com/55286302/76169869-62756380-615b-11ea-8bc8-7612eaa134aa.png)
+
+![IMAGEN3](https://user-images.githubusercontent.com/55286302/76169870-64d7bd80-615b-11ea-974c-4fcb412c476c.png)
+
+![IMAGEN4](https://user-images.githubusercontent.com/55286302/76169871-6608ea80-615b-11ea-9a55-85bee2c7b6ad.png)
+
+![IMAGEN5](https://user-images.githubusercontent.com/55286302/76169873-67d2ae00-615b-11ea-9c33-2e17e044b972.png)
