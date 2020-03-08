@@ -7,7 +7,7 @@
 # Server OS:                    Win64
 # Target compatibility:         ANSI SQL
 # HeidiSQL version:             4.0
-# Date/time:                    2020-03-07 12:46:56
+# Date/time:                    2020-03-08 15:59:44
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ANSI,NO_BACKSLASH_ESCAPES';*/
@@ -154,7 +154,7 @@ CREATE TABLE /*!32312 IF NOT EXISTS*/ "users" (
   PRIMARY KEY ("usersID"),
   UNIQUE KEY "usersID_UNIQUE" ("usersID"),
   UNIQUE KEY "usersNAME_UNIQUE" ("usersNAME")
-) AUTO_INCREMENT=22 COMMENT='Administracion de Usuarios';
+) AUTO_INCREMENT=23 COMMENT='Administracion de Usuarios';
 
 
 
@@ -170,6 +170,8 @@ REPLACE INTO "users" ("usersID", "usersNAME", "usersPASS", "usersNOM", "usersPRI
 	('20','admin','81dc9bdb52d04dc20036dbd8313ed055','Administrador','Administrador');
 REPLACE INTO "users" ("usersID", "usersNAME", "usersPASS", "usersNOM", "usersPRIVI") VALUES
 	('21','maxi','81dc9bdb52d04dc20036dbd8313ed055','Maxi Administrador','Administrador');
+REPLACE INTO "users" ("usersID", "usersNAME", "usersPASS", "usersNOM", "usersPRIVI") VALUES
+	('22','Roberto','827ccb0eea8a706c4c34a16891f84e7b','Roberto','Consumidor');
 /*!40000 ALTER TABLE "users" ENABLE KEYS;*/
 UNLOCK TABLES;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE;*/
