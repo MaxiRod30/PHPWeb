@@ -1,5 +1,5 @@
 # git-PHPWeb
-Proyecto BIOS web2.0 (con ejemplos)
+Proyecto:
 
 OBJETIVOS GENERALES ShopCamWeb es una empresa OnLine dedicada al rubro de la fotografía la cual permite a los usuarios registrados ver los productos a precios exclusivos. Para ello es necesario desarrollar un sistema que permita registrar a los usuarios del tipo administrador y consumidor. Los usuarios Administradores podrán añadir categorías, marcas y productos, mientras que un usuario consumidor podrá realizar todo tipo de consultas sobre los productos y obtener un archivo en formato PDF, si así lo desea. Para tal caso se han diseñado las siguientes tablas: 
  
